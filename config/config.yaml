@@ -40,8 +40,6 @@ platforms:
     name: "卫星通讯社"
   - id: "zaobao"
     name: "联合早报"
-  - id: "mktnews"
-    name: "MKT新闻"
   - id: "kaopu"
     name: "靠谱新闻"
   # === 财经投资类 ===
@@ -69,8 +67,6 @@ platforms:
     name: "掘金"
   - id: "github"
     name: "GitHub"
-  - id: "hackernews"
-    name: "Hacker News"
   - id: "solidot"
     name: "Solidot"
   - id: "v2ex"
@@ -81,8 +77,6 @@ platforms:
     name: "远景论坛"
   - id: "sspai"
     name: "少数派"
-  - id: "producthunt"
-    name: "ProductHunt"
 
   # === 其他/工具类 ===
   - id: "chongbuluo"
@@ -164,14 +158,14 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
+    # - id: "hacker-news"
+    #   name: "Hacker News"
+    #   url: "https://hnrss.org/frontpage"
       # max_age_days: 1               # 示例：只推送1天内的文章
 
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
+    # - id: "ruanyifeng"
+    #   name: "阮一峰的网络日志"
+    #   url: "http://www.ruanyifeng.com/blog/atom.xml"
       # max_age_days: 7               # 示例：推送7天内的文章（更新较慢的博客）
 
     # 自定义源示例
@@ -201,7 +195,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
   rank_threshold: 5                   # 排名高亮阈值
   sort_by_position_first: false       # true=按配置位置排序，false=按热点条数排序
   max_news_per_keyword: 0             # 每个关键词最大显示数量（0=不限制）
